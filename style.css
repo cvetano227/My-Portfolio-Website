@@ -273,9 +273,9 @@ main .My-Projects .project-cards .project-card .project-pills .html {
   padding: 6px 12px;
   border-radius: 8px;
   font-weight: 500;
-  background-color: transparent;
-  color: var(--text-secondary);
-  border: 1px solid #e34f26;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  color: #fb923c;
 }
 main .My-Projects .project-cards .project-card .project-pills .css {
   font-size: 12px;
@@ -283,8 +283,9 @@ main .My-Projects .project-cards .project-card .project-pills .css {
   border-radius: 8px;
   font-weight: 500;
   background-color: transparent;
-  color: var(--text-secondary);
-  border: 1px solid #264de4;
+  color: #3ea6ff;
+  background: rgba(0, 145, 255, 0.12);
+  border: 1px solid rgba(0, 145, 255, 0.35);
 }
 main .My-Projects .project-cards .project-card .project-pills .html:hover,
 .css:hover {
@@ -331,6 +332,18 @@ main .tools {
   background-position: center;
   background-size: cover;
 }
+main .tools .section-badge-tools {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+
+  background: rgba(0, 145, 255, 0.12);
+  border: 1px solid rgba(0, 145, 255, 0.35);
+  color: #3ea6ff;
+}
 main .tools .section-heading h1 {
   font-size: 34px;
   color: var(--primary-color);
@@ -346,6 +359,7 @@ main .tools .section-heading p {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .tools-grid .grid-tool {
@@ -410,4 +424,170 @@ main .tools .section-heading p {
 }
 .tools-grid .grid-tool:hover img {
   transform: scale(1.08);
+}
+
+/* =========================
+   WHAT I'M BEST AT
+   ========================= */
+
+main .best-at {
+  width: 100%;
+  padding: 40px 40px;
+  background-color: #090909;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+main .best-at .section-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(215, 38, 56, 0.1);
+  border: 1px solid rgba(215, 38, 56, 0.3);
+  color: var(--accent-color);
+}
+
+main .best-at h2 {
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+main .best-at p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* GRID */
+
+.best-at-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+
+.best-card {
+  position: relative;
+  min-height: 240px;
+  padding: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+
+  background-color: #0e0e0e;
+
+  /* YOUR SVG */
+  background-image: url("img/shooting-stars.svg");
+
+  background-size: cover;
+  background-position: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  transition: 0.3s ease;
+}
+
+/* DARK OVERLAY = CLEAN LOOK */
+
+.best-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.85),
+    rgba(10, 10, 10, 0.95)
+  );
+
+  z-index: 1;
+}
+
+/* CONTENT */
+
+.best-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.card-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.best-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+}
+
+.best-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* HOVER */
+
+.best-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* CTA */
+
+.best-at-cta {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.best-at-cta h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.best-at-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.best-at-btn:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .best-at-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .best-at-grid {
+    grid-template-columns: 1fr;
+  }
 }
