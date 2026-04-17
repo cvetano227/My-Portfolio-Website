@@ -39,13 +39,16 @@ header .nav-btns button {
     transform 0.3s ease,
     box-shadow 0.3s ease;
   font-weight: 600;
+  font-size: 16px;
 }
+
 header .nav-btns button:hover {
   background-color: var(--hover-color);
   transform: translateY(-1px);
   box-shadow: 0 6px 12px rgba(215, 38, 56, 0.2);
 }
 .logo img {
+  height: 30px;
   filter: brightness(0.95);
   transition: 0.3s ease;
 }
@@ -67,6 +70,7 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: var(--primary-color);
+  font-size: 16px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -167,11 +171,9 @@ main .My-Projects {
   width: 100%;
   min-height: 400px;
   background-color: var(--secondary-bg-color);
-  border-radius: 12px;
-  padding: 30px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   border-top: 1px solid var(--tertiary-bg-color);
 }
 main .My-Projects .section-heading {
@@ -179,9 +181,7 @@ main .My-Projects .section-heading {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  padding: 0;
+  margin-bottom: 40px;
 }
 main .My-Projects .section-heading h2 {
   font-size: 28px;
@@ -195,26 +195,19 @@ main .My-Projects .project-cards {
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 30px;
 }
 main .My-Projects .project-cards .project-card {
   width: 100%;
   border-radius: 12px;
-  padding: 20px;
   display: flex;
   flex-direction: row;
-  gap: 30px;
 }
 main .My-Projects .project-cards .project-img {
   width: 50%;
   display: flex;
   flex-direction: row;
-  height: 500px;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.08);
+  height: 50%;
   overflow: hidden;
-  border-radius: 12px;
-  margin-bottom: 8px;
 }
 main .My-Projects .project-cards .project-card-content {
   width: 50%;
@@ -223,7 +216,7 @@ main .My-Projects .project-cards .project-card-content {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 10px;
+  padding-left: 40px;
 }
 main .My-Projects .project-cards .project-img img {
   width: 100%;
@@ -241,29 +234,65 @@ main .My-Projects .project-cards .project-card h3 {
   font-size: 22px;
   font-weight: 600;
   color: var(--primary-color);
+  padding: 8px 0px 12px 0px;
 }
 main .My-Projects .project-cards .project-card p {
   font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.6;
+  margin-bottom: 16px;
+}
+main .My-Projects .project-cards .project-card .container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+main .My-Projects .project-cards .project-card .pills-links {
+  display: flex;
+  justify-content: space-between;
 }
 main .My-Projects .project-cards .project-card .project-pills {
   display: flex;
-  gap: 8px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-main .My-Projects .project-cards .project-card .project-pills .pill {
+/* main .My-Projects .project-cards .project-card .project-pills .pill {
   font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background-color: #1f1f1f;
-  border: 1px solid var(--tertiary-bg-color);
+  padding: 6px 12px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: transparent;
   color: var(--text-secondary);
+} */
+main .My-Projects .project-cards .project-card .project-pills .html {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid #e34f26;
+}
+main .My-Projects .project-cards .project-card .project-pills .css {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid #264de4;
+}
+main .My-Projects .project-cards .project-card .project-pills .html:hover,
+.css:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.2);
 }
 main .My-Projects .project-cards .project-card .project-links {
-  margin-top: 15px;
+  display: flex;
+  flex: start;
 }
 
 main .My-Projects .project-cards .project-card .project-btn {
